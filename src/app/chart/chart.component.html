@@ -30,9 +30,15 @@
 </div>
 <div id="print-section">
   <div class="report_tittle">
+    <div style="margin: 20px;">
+      <p>Serial: <span style="color: green;">{{serialNo}}</span></p>
+    </div>
     <div style="text-align: center;">
       <h1>{{ user.name }}</h1>
       <p style="color: grey">Address - {{ user.address }}</p>
+    </div>
+    <div style="margin: 20px;">
+      <p> Date: {{ date | date }}</p>
     </div>
   </div>
 
@@ -66,14 +72,24 @@
     </div>
   </div>
   <div class="report_tittle" style="margin-top: 100px;">
-    <div style="text-align: center;">
-      <p style="color: grey">Signature</p>
+    <div class="signature">
+      <div>
+        <p>- - - - - - - - - - - - - - - - - - - -</p>
+        <p >Supervisor</p>
+      </div>
+
     </div>
-    <div style="text-align: center;">
-      <p style="color: grey">Signature</p>
+    <div class="signature">
+      <div>
+        <p>- - - - - - - - - - - - - - - - - - - -</p>
+        <p >Manager</p>
+      </div>
     </div>
-    <div style="text-align: center;">
-      <p style="color: grey">Signature</p>
+    <div class="signature">
+      <div>
+        <p>- - - - - - - - - - - - - - - - - - - -</p>
+        <p >Director</p>
+      </div>
     </div>
   </div>
 </div>

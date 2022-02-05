@@ -7,6 +7,10 @@ const tempSchema = new mongoose.Schema({
     required:true,
     unique:true
   },
+  serialNo: {
+    type: String,
+    required:true
+  },
   isDisabled:{
     type:Boolean,
     required:true,

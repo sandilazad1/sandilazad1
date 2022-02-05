@@ -7,12 +7,12 @@ import { map, catchError } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class ChartService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getTempList(): Observable<any> {
     return this.http.get<any>('http://localhost:3000/temp').pipe(
       map((response) =>
-        response.isExecuted ? response.data[0].sensorData : []
+        response.isExecuted && response.data.length ? response.data[0] : null
       ),
       catchError((error) => of(null))
     );

@@ -23,7 +23,8 @@ export class ChartComponent implements OnInit {
   lineChart: any;
   datas: any = [];
   user: any;
-
+  date = new Date();
+  serialNo: any;
   constructor(
     private chartService: ChartService,
     private authService: AuthService,
@@ -92,16 +93,18 @@ export class ChartComponent implements OnInit {
   }
 
   getTemps() {
-    this.chartService.getTempList().subscribe((datas) => {
-      // this.tempList = datas.map((item) => item.temp);
-      this.datas = datas;
-      this.timeList = [];
-      this.tempList = [];
-      datas.map((item) => {
-        this.timeList.push(moment(item.date).format('hh:mm A'));
-        this.tempList.push(item.temp);
-      });
-      this.updateChartData();
+    this.chartService.getTempList().subscribe((data) => {
+      if (data){
+        this.serialNo = data.serialNo
+        this.datas = data.sensorData;
+        this.timeList = [];
+        this.tempList = [];
+        data.sensorData.map((item) => {
+          this.timeList.push(moment(item.date).format('hh:mm A'));
+          this.tempList.push(item.temp);
+        });
+        this.updateChartData();
+      }
     });
   }
 

@@ -43,5 +43,9 @@
 .report_tittle{
   line-height: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+.signature{
+  text-align: center;
+  color: grey
 }
