@@ -1,0 +1,79 @@
+<div>
+  <mat-toolbar color="primary">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>equalizer</mat-icon>
+    </button>
+    <span>Chart App</span>
+    <span class="example-spacer"></span>
+    <button
+      mat-mini-fab
+      color="primary"
+      matTooltip="Download Report"
+      style="margin-right: 15px"
+      (click)="generatePDF()"
+    >
+      <mat-icon>file_download</mat-icon>
+    </button>
+    <button
+      mat-mini-fab
+      color="primary"
+      matTooltip="Log Out"
+      (click)="logOut()"
+    >
+      <mat-icon>power_settings_new</mat-icon>
+    </button>
+  </mat-toolbar>
+</div>
+<div id="print-section">
+  <div class="report_tittle">
+    <div style="text-align: center;">
+      <h1>{{ user.name }}</h1>
+      <p style="color: grey">Address - {{ user.address }}</p>
+    </div>
+  </div>
+
+  <div class="chart-diplay">
+    <!-- <div style="width: 100%">
+    <canvas id="bar" height="230"></canvas>
+  </div> -->
+
+    <div style="width: 100%">
+      <canvas id="line" height="230"></canvas>
+    </div>
+
+    <div style="width: 100%">
+      <table class="center" id="tableDatas">
+        <tr>
+          <th>S/N</th>
+          <th>Date & Time</th>
+          <th>Temperature</th>
+        </tr>
+        <tr *ngFor="let item of datas; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item?.date | date: "short" }}</td>
+          <td>
+            <b
+              >{{ item?.temp }}<sup><small>o</small></sup></b
+            >
+            Centigrade
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="report_tittle" style="margin-top: 100px;">
+    <div style="text-align: center;">
+      <p style="color: grey">Signature</p>
+    </div>
+    <div style="text-align: center;">
+      <p style="color: grey">Signature</p>
+    </div>
+    <div style="text-align: center;">
+      <p style="color: grey">Signature</p>
+    </div>
+  </div>
+</div>

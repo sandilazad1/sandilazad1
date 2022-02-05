@@ -1,0 +1,47 @@
+.chart-diplay {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3em;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+#tableDatas {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 30px;
+}
+
+#tableDatas td,
+#tableDatas th {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+#tableDatas tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#tableDatas tr:hover {
+  background-color: #ddd;
+}
+
+#tableDatas th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  // text-align: left;
+  background-color: rgba(0, 0, 255, 0.4);
+  color: white;
+}
+
+.center {
+  text-align: center;
+}
+
+.report_tittle{
+  line-height: 0;
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,0 +1,102 @@
+mat-card {
+  max-width: 400px;
+  min-width: 400px;
+  text-align: center;
+  max-height: 600px;
+  min-height: 350px;
+  border-radius: 4%;
+  opacity: 0.85;
+}
+.header {
+  text-align: center;
+  margin-top: 40px !important;
+  color: #009ce2;
+  font-weight: bolder;
+}
+.full-width {
+  width: 80%;
+}
+
+.button-row {
+  padding-top: 5px;
+}
+
+.button-row a {
+  margin-right: 8px;
+  text-align: center;
+}
+
+.forget-password {
+  padding-left: 0px;
+}
+
+.emailInput {
+  padding-top: 10px;
+}
+
+.aLink {
+  float: right;
+  padding-right: 60px;
+  text-decoration: none;
+}
+
+#bg {
+  background-image: url("../../../assets/login background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.button-login {
+  background-color: #009ce2;
+  color: azure;
+  margin-top: 5px;
+}
+
+//input outline color
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+//   color: #009ce2!important;
+// }
+
+//mat-input focused color
+::ng-deep
+  .mat-form-field-appearance-outline.mat-focused
+  .mat-form-field-outline-thick {
+  color: #009ce2 !important;
+}
+
+// mat-input error outline color
+::ng-deep
+  .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid
+  .mat-form-field-outline-thick {
+  color: #009ce2 !important;
+  opacity: 0.8 !important;
+}
+
+// mat-input carent color
+::ng-deep .mat-input-element {
+  caret-color: #009ce2 !important;
+}
+
+// mat-input error carent color
+::ng-deep .mat-form-field-invalid .mat-input-element,
+.mat-warn .mat-input-element {
+  caret-color: #009ce2 !important;
+}
+
+// mat-label normal state style
+::ng-deep .mat-form-field-label {
+  color: rgba(0, 0, 0, 0.6) !important;
+  // color: $mainColor!important;
+}
+
+// mat-label focused style
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: #009ce2 !important;
+}
+
+// mat-label error style
+// ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+//   color: #009ce2!important;
+// }
